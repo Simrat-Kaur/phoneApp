@@ -2,6 +2,8 @@ var PORT=process.env.PORT|| 3000;
 require('./models/db');
 
 
+
+
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
@@ -12,6 +14,8 @@ var app = express();
 app.use(bodyparser.urlencoded({
     extended: true
 }));
+var distDir = __dirname + "/dist/";
+ app.use(express.static(distDir));
 
 app.use(bodyparser.json());
 app.set('views', path.join(__dirname, '/views/'));
