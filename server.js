@@ -1,4 +1,4 @@
-var PORT=process.env.PORT|| 3000;
+var PORT=process.env.PORT|| 5000;
 require('./models/db');
 
 
@@ -14,8 +14,7 @@ var app = express();
 app.use(bodyparser.urlencoded({
     extended: true
 }));
-var distDir = __dirname + "/dist/";
- app.use(express.static(distDir));
+
 
 app.use(bodyparser.json());
 app.set('views', path.join(__dirname, '/views/'));
