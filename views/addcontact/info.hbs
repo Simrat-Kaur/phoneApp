@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/hotel">Add New</a> Hotel Information</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>BOB</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each info}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.dob}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.email}}</td>
+            <td>
+                <a class="btn btn-success" href="/addcontact/{{this._id}}">Edit</a>
+                <a class="btn btn-danger" href="/addcontact/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
