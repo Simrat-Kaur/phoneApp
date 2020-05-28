@@ -1,3 +1,4 @@
+require('dotenv').config();
 var PORT=process.env.PORT|| 5000;
 require('./models/db');
 
