@@ -1,8 +1,8 @@
 # phoneApp
 
-#Architecture used: Model View Controller(MVC)
+#Architecture used: Model View Controller(MVC).
 This assignment is done using Node.js.
-Backend: MongoDB
+Backend used: MongoDB
 
 #Images
 In this page we can insert new contact.
