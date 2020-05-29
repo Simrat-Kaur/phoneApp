@@ -6,7 +6,7 @@ const Addcontact = mongoose.model('addcontact');
 
 router.get('/', (req, res) => {
     res.render("addcontact/addcontact", {
-        viewTitle: "Insert Hotel Information"
+        viewTitle: "Insert Contact Information"
     });
 });
 
@@ -62,7 +62,7 @@ router.get('/info', (req, res) => {
             });
         }
         else {
-            console.log('Error in retrieving hotel info :' + err);
+            console.log('Error in retrieving Contact info :' + err);
         }
     });
 });
@@ -73,7 +73,7 @@ router.get('/:id', (req, res) => {
     Addcontact.findById(req.params.id, (err, doc) => {
         if (!err) {
             res.render("addcontact/addcontact", {
-                viewTitle: "Update Hotel Information",
+                viewTitle: "Update Contact Information",
                 addcontact: doc
             });
         }
@@ -86,7 +86,7 @@ router.get('/delete/:id', (req, res) => {
         if (!err) {
             res.redirect('/addcontact/info');
         }
-        else { console.log('Error in hotel info delete :' + err); }
+        else { console.log('Error in contact info deletion :' + err); }
     });
 });
 
