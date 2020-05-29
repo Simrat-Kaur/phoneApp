@@ -64,7 +64,7 @@ router.get('/info', (req, res) => {
         else {
             console.log('Error in retrieving Contact info :' + err);
         }
-    });
+    }).sort({"name":1});
 });
 
 
